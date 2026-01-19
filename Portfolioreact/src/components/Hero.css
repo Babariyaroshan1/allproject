@@ -1,0 +1,118 @@
+/* HERO SECTION */
+.hero-section {
+  overflow: hidden;
+  height: 81vh;
+}
+
+/* NAME */
+.hero-name {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideFade 0.9s ease forwards;
+}
+
+/* TITLE */
+.hero-title {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* ===================== */
+/* ROLE TEXT ANIMATION */
+/* ===================== */
+
+.hero-role {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  padding-right: 6px;
+}
+
+.hero-role::before {
+  content: "Designer";
+  animation: changeText 6s infinite;
+}
+
+/* Cursor */
+.hero-role::after {
+  content: "|";
+  margin-left: 3px;
+  animation: blink 0.8s infinite;
+}
+
+/* ===================== */
+/* SOCIAL ICONS */
+/* ===================== */
+
+.hero-social a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: iconUp 0.2s ease forwards;
+}
+
+.hero-social a {
+  color: var(--primary) !important;
+}
+
+.hero-social a:nth-child(1) { animation-delay: 1s; }
+.hero-social a:nth-child(2) { animation-delay: 1.2s; }
+.hero-social a:nth-child(3) { animation-delay: 1.4s; }
+
+.hero-social a:hover {
+  transform: scale(1.2) rotate(5deg);
+  transition: transform 0.3s ease;
+}
+
+.profile-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%!important;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .profile-img {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+
+/* ===================== */
+/* KEYFRAMES */
+/* ===================== */
+
+@keyframes slideFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* TEXT ROTATION */
+@keyframes changeText {
+  0% { content: "Designer"; }
+  33% { content: "Developer"; }
+  66% { content: "Freelancer"; }
+  100% { content: "Designer"; }
+}
+
+/* CURSOR */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ICON ENTRY */
+@keyframes iconUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

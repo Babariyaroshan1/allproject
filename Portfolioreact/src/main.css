@@ -1,0 +1,325 @@
+:root {
+  --bs-primary: #8f8cf6;
+}
+
+/* LIGHT MODE */
+body.light {
+  --bg: #ffffff !important;
+  --text: #000000 !important;
+  --nav: #f8f9fa !important;
+  --bs-border-width: 1px !important;
+  --bs-border-color: rgb(34, 33, 33);
+
+  --card-bg: #ffffff !important;
+  --card-border: #e5e7eb !important;
+  --list-bg: #ffffff !important;
+  --list-border: #e5e7eb !important;
+  --muted-text: #333334 !important;
+  --primary: #0d6efd !important;
+  --bs-primary: #0d6efd !important;
+  --cursor: #0d6efd !important;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0f172a !important;
+  --text: #ffffff !important;
+  --nav: #111827 !important;
+  --bs-border-width: 1px !important;
+  --bs-border-color: #dee2e6b0 !important;
+
+  --card-bg: #111827 !important;
+  --card-border: #263a4e !important;
+  --list-bg: #020617 !important;
+  --list-border: #374151 !important;
+  --muted-text: #a1a1a1 !important;
+  --primary: #8f8cf6 !important;
+  --bs-primary: #8f8cf6;
+  --cursor: #8f8cf6 !important;
+}
+
+body .text-primary {
+  color: var(--primary) !important;
+}
+
+body .detail {
+  color: var(--text) !important;
+}
+
+/* BODY THEME */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: var(--text) !important;
+}
+
+.navbar .nav-link.active {
+  color: var(--primary) !important;
+}
+
+/* NAVBAR */
+.nav-theme {
+  background-color: var(--nav) !important;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.navmenu .nav-link {
+  position: relative;
+}
+
+.navmenu .nav-link::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom:0;
+  background-color: var(--bs-primary);
+  visibility: hidden;
+  width: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.navmenu .nav-link:hover::before,
+.navmenu .nav-link.active::before {
+  visibility: visible;
+  width: 25px;
+}
+
+
+  /* CARD */
+  .card,
+  .shadow,
+  .shadow-sm,
+  .shadow-lg {
+    background-color: var(--card-bg) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--card-border) !important;
+  }
+
+  /* LIST GROUP */
+  .list-group-item {
+    background-color: var(--list-bg) !important;
+    color: var(--text) !important;
+    border-color: var(--list-border) !important;
+  }
+
+  /* TEXT COLORS */
+  .text-muted,
+  .text-secondary {
+    color: var(--muted-text) !important;
+  }
+
+  .muted-text,
+  .text-secondary {
+    color: var(--muted-text) !important;
+  }
+
+  .text-primary {
+    color: var(--primary) !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--text) !important;
+  }
+
+  p,
+  span {
+    color: var(--text) !important;
+  }
+
+  /* BUTTON */
+  .btn-outline-secondary {
+    color: var(--text);
+    border-color: var(--muted-text);
+  }
+
+  .btn-outline-secondary:hover {
+    background-color: var(--list-border);
+    color: var(--text);
+  }
+
+  /* FORM INPUT */
+  input,
+  textarea,
+  select {
+    background-color: var(--list-bg) !important;
+    color: var(--text) !important;
+    border-color: var(--list-border) !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--muted-text) !important;
+  }
+
+
+  /* SMOOTH THEME ANIMATION */
+  * {
+    transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+  }
+
+
+  .cursor-ball {
+    width: 10px;
+    height: 10px;
+    background: #0581ee;
+    border-radius: 50%;
+    position: fixed;
+    background: var(--cursor);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+
+
+  /* Skill wrapper */
+  .skill-progress {
+    width: 100%;
+  }
+
+  /* Skill text */
+  .skill-progress .skill {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  /* % */
+  .skill-progress .val {
+    color: var(--primary);
+  }
+
+  /* Track */
+  .progress-bar-wrap {
+    background: color-mix(in srgb, var(--text), transparent 90%);
+    height: 10px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  /* Fill */
+  .progress-bar {
+    height: 100%;
+    background-color: var(--bs-primary);
+    /* transition: width 0.1s ease; */
+  }
+
+  /* Skill wrapper */
+  .skill-progress {
+    width: 100%;
+  }
+
+  /* Skill text */
+  .skill-progress .skill {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  /* % */
+  .skill-progress .val {
+    color: var(--primary);
+  }
+
+  /* Track */
+  .progress-bar-wrap {
+    background: color-mix(in srgb, var(--text), transparent 90%);
+    height: 10px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  /* Fill */
+  .progress-bar {
+    height: 100%;
+    background-color: var(--primary);
+    transition: width 0.9s ease;
+  }
+
+  .bgbar {
+    background-color: var(--bs-primary) !important;
+  }
+
+  .resume .resume-item::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50px;
+    left: -9px;
+    top: 0;
+    background: var(--bg) !important;
+    border: 2px solid #80c9f3;
+  }
+
+  .resume .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid var(--bs-primary) !important;
+    position: relative;
+  }
+
+  .resume .resume-item h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color:
+      color-mix(in srgb, #fafafa, transparent 20%);
+    margin-bottom: 10px;
+  }
+
+  .resume .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .contact .icon {
+    color: var(--contrast-color);
+    background-color: var(--bs-primary) !important;
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+
+  .form-control {
+    border: var(--bs-border-width) solid var(--bs-border-color) !important;
+    font-size: 14px !important;
+    padding: 10px 15px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
+  }
+
+  input {
+    color: var(--text) !important;
+  }
